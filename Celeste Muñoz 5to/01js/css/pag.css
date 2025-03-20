@@ -1,0 +1,33 @@
+body {
+    text-align: center;
+}
+
+#cuadrado {
+    width: 200px;
+    height: 200px;
+    background-color: grey;
+    margin: 20px;
+}
+
+.botones {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#rojo { background-color: red; }
+#verde { background-color: green; }
+#azul { background-color: blue; }
+
+.boton:hover {
+    opacity: 0.8;
+}
+
