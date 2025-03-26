@@ -1,0 +1,9 @@
+body{
+    text-align: center;
+}
+#cuadradogris{
+    width: 200px;
+    height: 200px;
+    background-color: darkgrey;
+    margin: 20px auto;
+}
