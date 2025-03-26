@@ -1,0 +1,11 @@
+body{
+    text-align: center;
+}
+
+#colorBox{
+    width: 200px;
+    height: 200px;
+    background-color: gray;
+    margin: 20px auto;
+}
+
