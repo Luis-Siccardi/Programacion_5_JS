@@ -1,0 +1,32 @@
+.colorbox {
+    width: 200px;
+    height: 200px;
+    background: #5e5e5e;
+    margin-bottom: 20px;
+}
+
+.button-container {
+    display: flex;
+    gap: 10px;
+}
+
+.button1 {
+    background-color: rgb(255, 0, 0);
+    border: #8d0505 dashed;
+}
+
+.button2 {
+    background-color: #009929;
+    border: #003400 dashed;
+}
+
+.button3 {
+    background-color: blue;
+    border: rgb(97, 97, 238) dashed;
+}
+
+/*h1 {
+     text-align: center;
+}*/
+
+
