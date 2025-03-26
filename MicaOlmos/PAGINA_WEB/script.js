@@ -13,3 +13,9 @@ document.getElementById("buttonb").addEventListener("click", function(){
 document.getElementById("colorBox").addEventListener("click", function(){
     document.getElementById("colorBox").style.backgroundColor = "grey";
 });
+
+const button = document.querySelector ("button")
+function action () {
+    alert ("¡Ayuda!");
+};
+button.addEventListener("click", action);
