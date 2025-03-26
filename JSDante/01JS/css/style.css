@@ -1,0 +1,20 @@
+body {
+    text-align: center;
+}
+
+#cuadrado {
+    width: 200px;
+    height: 200px;
+    background-color:gray;
+    margin: 20px auto;
+}
+
+#azul {
+    background-color: blue;
+}
+#rojo {
+    background-color: red;
+}
+#verde {
+    background-color: green;
+}
