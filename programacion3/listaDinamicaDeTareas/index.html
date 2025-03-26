@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tareas</title>
+</head>
+<body>
+    <input type="text" id="tareaInput" placeholder="Escribe una tarea">
+    <button id="agregarBtn">Agregar Tarea</button>
+    <ul id="listaTarea"></ul>
+
+        <script>
+        document.getElementById("agregarBtn").addEventListener("click", function(){
+            const input= document.getElementById("tareaInput")
+            const tareaTexto = input.value.trim();
+            if (tareaTexto=="")return;
+            const li=document.createElement("li");
+            li.innerHTML= tareaTexto +"";
+            cost botonEliminar=document.createElement("button");
+            botonEliminar.tareaContent="Eliminar";
+            botonEliminar.addEventListener("click", function(){
+                li.remove()
+            });
+            li.appendChild(botonEliminar);
+            Document.getElementById("listaTarea").appendChild(li);
+            input.value="";
+
+        });
+        </script>
+</body>
+</html>
