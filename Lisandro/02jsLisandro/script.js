@@ -3,23 +3,28 @@ document.getElementById("taskInput").setAttribute("placeholder", "Escribe una ta
 function addTask() {
     const taskText = document.getElementById("taskInput").value;
     if (taskText === "") return;
-    
+
     const taskContainer = document.getElementById("taskContainer");
-    const taskDiv = document.createElement("div");
-    taskDiv.classList.add("task");
-    
-    const taskSpan = document.createElement("span");
-    taskSpan.innerHTML = taskText;
-    
+   
+    let taskList = taskContainer.querySelector("ul");
+    if (!taskList) {
+        taskList = document.createElement("ul");
+        taskContainer.appendChild(taskList);
+    }
+
+   
+    const taskItem = document.createElement("li");
+    taskItem.textContent = taskText;
+
+  
     const deleteButton = document.createElement("button");
     deleteButton.innerHTML = "Eliminar";
     deleteButton.addEventListener("click", function() {
-        taskDiv.remove();
+        taskItem.remove();
     });
-    
-    taskDiv.appendChild(taskSpan);
-    taskDiv.appendChild(deleteButton);
-    taskContainer.appendChild(taskDiv);
+
+    taskItem.appendChild(deleteButton);
+    taskList.appendChild(taskItem);
     
     document.getElementById("taskInput").value = "";
 }
