@@ -1,15 +1,16 @@
-// Cuando se hace clic en el botón con id "agregar", se ejecuta esta función
+// cuando se aprieta el boton agruegar se cumple la funcion 
 document.getElementById("agregar").onclick = function() {
-    
-    // Obtiene el valor que el usuario escribió en el input con id "tarea"
+// obtiene el valor del input 
     const tarea = document.getElementById("tarea").value;
-    if (tarea) {
-        
-        // Agrega la tarea dentro de la lista <ul> como un nuevo <li>
-        // += significa que se suma el nuevo <li> al contenido existente
-        document.getElementById("listaTareas").innerHTML += "<li>" + tarea + "</li>";
-        
-        // Limpia el input después de agregar la tarea
-        document.getElementById("tarea").value = "";
-    }
+   // si el input esta vacio no hace nathing 
+    if (!tarea) return;
+ // crea un nuevo elemento li para la lista 
+    const li = document.createElement("li");
+    // agrega la tarea y un boton "eliminar" adentro a la lista
+    li.innerHTML = `${tarea} <button onclick="this.parentNode.remove()">Eliminar</button>`;
+    //agrega el li dentro del ul con una id de listaDeTarea
+    document.getElementById("listaTareas").appendChild(li);
+    // limpia el input  despues de agregar la tarea 
+    document.getElementById("tarea").value = "";
 };
+
